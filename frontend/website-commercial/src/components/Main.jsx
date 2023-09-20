@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Player } from '@lottiefiles/react-lottie-player'
 import SplashScreenLottie from '../lottie/SplashScreen.json'
+import Nav from './Nav'
 
-const SplashScreen = () => {
+const Main = () => {
     const [completed, setCompleted] = useState(false)
 
     return (
@@ -22,11 +23,9 @@ const SplashScreen = () => {
         </div>
         :
         <div className='bg-background-main w-screen h-screen'>
-            <div className='m-auto w-2/3 h-screen'>
-                <h1 className=' font-bold text-5xl text-light-white'> Hello World!</h1>
-            </div>
+            <Nav />
         </div>
     )
 }
 
-export default SplashScreen
+export default Main
