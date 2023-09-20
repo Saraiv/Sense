@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Player } from '@lottiefiles/react-lottie-player'
-import SplashScreenLottie from '../lottie/SplashScreenTemp.json'
+import SplashScreenLottie from '../lottie/SplashScreen.json'
 
 const SplashScreen = () => {
     const [completed, setCompleted] = useState(false)

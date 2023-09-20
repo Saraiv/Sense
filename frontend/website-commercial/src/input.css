@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.lottie > svg {
+    transform: unset !important;
+}
