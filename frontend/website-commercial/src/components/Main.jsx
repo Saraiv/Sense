@@ -4,6 +4,7 @@ import SplashScreenLottie from '../lottie/SplashScreen.json'
 import Nav from './Nav'
 import Home from './Home'
 import AboutUs from './AboutUs'
+import Pricing from './Pricing'
 
 const Main = () => {
     const [completed, setCompleted] = useState(false)
@@ -28,6 +29,7 @@ const Main = () => {
             <Nav />
             <Home />
             <AboutUs />
+            <Pricing />
         </div>
     )
 }
