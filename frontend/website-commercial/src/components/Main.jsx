@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Player } from '@lottiefiles/react-lottie-player'
 import SplashScreenLottie from '../lottie/SplashScreen.json'
 import Nav from './Nav'
+import Home from './Home'
 
 const Main = () => {
     const [completed, setCompleted] = useState(false)
@@ -24,6 +25,7 @@ const Main = () => {
         :
         <div className='bg-background-main w-screen h-screen'>
             <Nav />
+            <Home />
         </div>
     )
 }
