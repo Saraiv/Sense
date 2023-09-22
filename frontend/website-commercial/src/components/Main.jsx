@@ -5,6 +5,7 @@ import Nav from './Nav'
 import Home from './Home'
 import AboutUs from './AboutUs'
 import Pricing from './Pricing'
+import ContactUs from './ContactUs'
 
 const Main = () => {
     const [completed, setCompleted] = useState(false)
@@ -30,6 +31,7 @@ const Main = () => {
             <Home />
             <AboutUs />
             <Pricing />
+            <ContactUs />
         </div>
     )
 }
