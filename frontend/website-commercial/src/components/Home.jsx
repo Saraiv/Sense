@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../recourses/LogoTransparent.svg'
+import { Logo } from './helpers/Images'
 
 const Home = () =>{
     return(
@@ -9,10 +9,10 @@ const Home = () =>{
             </div>
             <div className='w-1/2 h-full flex align-middle justify-start items-center'>
                 <div className='flex-col'>
-                    <h1 className='pb-20 text-bold text-9xl text-light-white'>
+                    <h1 className='pb-20 text-bold text-9xl text-light-gray'>
                         Sense
                     </h1>
-                    <p className='text-light-white text-4xl'>
+                    <p className='text-light-gray text-4xl'>
                         Sense is a freelance that came up with an idea to help deaf people so that they can feel through vibrations and sensations the rhythm and harmony of any music, style and preference.
                     </p>
                 </div>

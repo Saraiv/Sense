@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import { Player } from '@lottiefiles/react-lottie-player'
-import SplashScreenLottie from '../lottie/SplashScreen.json'
-import Nav from './Nav'
-import Home from './Home'
-import AboutUs from './AboutUs'
-import Pricing from './Pricing'
-import ContactUs from './ContactUs'
+import { SplashScreen } from './helpers/Lottie'
+import { Nav, Home, AboutUs, Pricing, ContactUs } from './helpers/Components'
 
 const Main = () => {
     const [completed, setCompleted] = useState(false)
@@ -20,7 +16,7 @@ const Main = () => {
                 ref = {this}
                 autoplay = {true}
                 loop = {false}
-                src = {JSON.stringify(SplashScreenLottie)}
+                src = {JSON.stringify(SplashScreen)}
                 style={{ height: '300px', width: '300px' }}
                 
             />

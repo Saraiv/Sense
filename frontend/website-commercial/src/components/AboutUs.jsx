@@ -1,6 +1,6 @@
 import React from 'react'
 import { Player } from '@lottiefiles/react-lottie-player'
-import Waves from '../lottie/Waves.json'
+import { Waves } from './helpers/Lottie'
 
 const AboutUs = () =>{
     return(

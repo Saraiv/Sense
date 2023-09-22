@@ -1,12 +1,11 @@
 import React from 'react'
-import Logo from '../recourses/LogoTransparent.svg'
-import Account from '../recourses/Account.svg'
+import { Logo, Account } from './helpers/Images'
 
 const Nav = () => {
     return (
         <nav className='w-full h-24 fixed'>
             <div className='w-2/3 m-auto flex'>
-                <div className='w-2/3 flex text-light-white text-center'>
+                <div className='w-2/3 flex text-light-gray text-center'>
                     <a className='w-24 h-24' href="#home">
                         <img className='m-auto w-full h-full' src={Logo} alt="Sense" />
                     </a>
