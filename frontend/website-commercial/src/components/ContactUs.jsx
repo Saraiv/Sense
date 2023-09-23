@@ -3,9 +3,9 @@ import { Logo } from './helpers/Images'
 
 const ContactUs = () =>{
     return(
-        <div className=' h-2/5 bg-background-main w-full'>
-            <div className='w-2/3 h-2/3 m-auto flex'>
-                <div className='w-1/3 pt-5 block h-fit text-light-gray'>
+        <div className=' h-2/5 lg:h-fit lg:m-auto bg-background-main w-full'>
+            <div className='w-2/3 h-2/3 m-auto flex lg:block lg:m-auto'>
+                <div className='w-1/3 pt-5 block h-fit text-light-gray lg:m-auto'>
                     <img className='w-40 h-40' src={Logo} alt="Sense" />
                     <div className='block w-full px-7 pt-3'>
                         <h1 className='font-bold text-sm'>SENSE INFO</h1>
@@ -15,7 +15,7 @@ const ContactUs = () =>{
                         </div>
                     </div>
                 </div>
-                <div className='w-2/3 pt-12 flex h-fit text-light-gray'>
+                <div className='w-2/3 pt-12 flex h-fit text-light-gray lg:m-auto'>
                     <div className='block w-full'>
                         <h1 className='font-bold'>Contact Us</h1>
                         <div className='flex pt-3 w-full text-background-main font-bold'>
@@ -34,8 +34,8 @@ const ContactUs = () =>{
                 </div>
             </div>
             <div className='w-2/3 h-1/3 block m-auto pt-16 pl-7'>
-                <p className='w-full text-sm text-light-gray'>
-                    © 2023-2023 Todos os direitos reservados Sense
+                <p className='w-full text-sm text-light-gray lg:m-auto lg:text-center lg:pt-12'>
+                    © 2023-2023 All rights reserved to Sense
                 </p>
             </div>
         </div>

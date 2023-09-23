@@ -1,8 +1,6 @@
-import React, { useRef } from 'react'
+import React from 'react'
 
 const Pricing = () =>{
-    const windowSize = useRef([window.innerWidth, window.innerHeight])
-
     return(
         <div className='h-full lg:h-fit flex align-middle justify-start items-center bg-light-white'>
             <div className='w-2/3 m-auto text-background-main'>
