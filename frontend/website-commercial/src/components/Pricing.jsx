@@ -6,7 +6,7 @@ const Pricing = () =>{
     return(
         <Element id='pricing' className='h-full lg:h-fit flex align-middle justify-start items-center bg-light-white'>
             <div className='w-2/3 m-auto text-background-main'>
-                <h1 className='py-32 text-bold text-9xl xl:text-8xl lg:text-center'>Pricing</h1>
+                <h1 className='text-bold py-32 md:py-24 text-9xl xl:text-8xl md:text-7xl lg:text-center'>Pricing</h1>
                 <div className='flex w-full lg:block'>
                     <div className='bg-background-main bg-opacity-80 rounded-3xl w-1/3 h-80 text-light-gray m-auto mr-5 relative lg:w-1/2 lg:text-center lg:m-auto lg:mb-4'>
                         <h1 className='p-8 xl:p-6 text-4xl xl:text-3xl'>59,99€</h1>

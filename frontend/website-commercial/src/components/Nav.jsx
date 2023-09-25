@@ -57,13 +57,24 @@ const Nav = () => {
                 <div className='hidden lg:ml-auto lg:block lg:align-middle lg:text-right lg:justify-end lg:mt-8'>
                     {isOpen ?
                         <div className='lg:overflow-hidden'>
-                            <div className='lg:z-50'>
-                                <Hamburger 
-                                    toggled={isOpen}
-                                    toggle={setOpen}
-                                    color='#0B1A24'
-                                />
-                            </div>
+                            {
+                                !isScrolled ?
+                                    <div className='lg:z-50'>
+                                        <Hamburger 
+                                            toggled={isOpen}
+                                            toggle={setOpen}
+                                            color='#0B1A24'
+                                        />
+                                    </div>
+                                :
+                                    <div className='lg:z-50'>
+                                        <Hamburger 
+                                            toggled={isOpen}
+                                            toggle={setOpen}
+                                            color='#CCDCF0'
+                                        />
+                                    </div>
+                            }
                             <div className='lg:-z-50 lg:m-0 lg:block lg:absolute lg:right-0 lg:top-0 lg:w-screen lg:h-screen lg:bg-light-gray lg:text-background-main'>
                                 <div className='lg:m-auto lg:w-1/2 lg:h-full lg:flex lg:align-middle lg:justify-center lg:items-center'>
                                     <div className='lg:block lg:w-full lg:h-fit lg:text-center'>
@@ -76,12 +87,22 @@ const Nav = () => {
                             </div>
                         </div>
                     :
-                        <Hamburger 
-                            toggled={isOpen}
-                            toggle={setOpen}
-                            color='#CCDCF0'
-                            className='lg:z-50'
-                        />
+                        isScrolled ?
+                            <div className='lg:z-50'>
+                                <Hamburger 
+                                    toggled={isOpen}
+                                    toggle={setOpen}
+                                    color='#0B1A24'
+                                />
+                            </div>
+                        :
+                            <div className='lg:z-50'>
+                                <Hamburger 
+                                    toggled={isOpen}
+                                    toggle={setOpen}
+                                    color='#CCDCF0'
+                                />
+                            </div>
                     }
                 </div>
             </div>
