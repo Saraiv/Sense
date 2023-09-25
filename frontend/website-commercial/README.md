@@ -1,6 +1,6 @@
 # Sense
 <p align="center">
-  <img src="../resources/LogoSense.svg">
+  <img src="../../resources/LogoSense.svg">
 </p>
 <aside>
   Frontend of Sense web application
