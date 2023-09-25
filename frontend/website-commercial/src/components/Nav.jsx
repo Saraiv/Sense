@@ -27,7 +27,7 @@ const Nav = () => {
     }
 
     return (
-        <nav className='w-full h-24 fixed backdrop-blur-sm'>
+        <nav className='w-full h-24 fixed backdrop-blur-sm z-50'>
             <div className='w-2/3 m-auto flex'>
                 <div className={!isScrolled ? 'w-2/3 xl:w-3/4 flex text-light-gray text-center lg:hidden' : 'w-2/3 xl:w-3/4 flex text-background-main text-center lg:hidden'}>
                     <ScrollLink smooth={true} to='home' className='w-24 h-24 cursor-pointer'>
