@@ -22,6 +22,10 @@ const Nav = () => {
         }
     })
 
+    const handleClickHamburger = () =>{
+        isOpen ? setOpen(false) : setOpen(true)
+    }
+
     return (
         <nav className='w-full h-24 fixed backdrop-blur-sm'>
             <div className='w-2/3 m-auto flex'>
@@ -63,13 +67,12 @@ const Nav = () => {
                             <div className='lg:-z-50 lg:m-0 lg:block lg:absolute lg:right-0 lg:top-0 lg:w-screen lg:h-screen lg:bg-light-gray lg:text-background-main'>
                                 <div className='lg:m-auto lg:w-1/2 lg:h-full lg:flex lg:align-middle lg:justify-center lg:items-center'>
                                     <div className='lg:block lg:w-full lg:h-fit lg:text-center'>
-                                        <ScrollLink smooth={true} to='home' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8'>Home</ScrollLink>
-                                        <ScrollLink smooth={true} to='aboutus' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8'>About Us</ScrollLink>
-                                        <ScrollLink smooth={true} to='pricing' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8'>Pricing</ScrollLink>
-                                        <ScrollLink smooth={true} to='contactus' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8'>Contact Us</ScrollLink>
+                                        <ScrollLink smooth={true} onClick={handleClickHamburger} to='home' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8 cursor-pointer'>Home</ScrollLink>
+                                        <ScrollLink smooth={true} onClick={handleClickHamburger} to='aboutus' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8 cursor-pointer'>About Us</ScrollLink>
+                                        <ScrollLink smooth={true} onClick={handleClickHamburger} to='pricing' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8 cursor-pointer'>Pricing</ScrollLink>
+                                        <ScrollLink smooth={true} onClick={handleClickHamburger} to='contactus' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8 cursor-pointer'>Contact Us</ScrollLink>
                                     </div>
                                 </div>
-                                
                             </div>
                         </div>
                     :
