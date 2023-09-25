@@ -1,21 +1,39 @@
-import React, { useState } from 'react'
-import { Logo, Account } from './helpers/Images'
+import React, { useState, useEffect } from 'react'
+import { Logo, LogoDark, Account, AccountDark } from './helpers/Images'
 import { Sling as Hamburger } from 'hamburger-react'
 import Scrolling from './hooks/Scroll'
 import Scroll from 'react-scroll'
 const ScrollLink = Scroll.Link
 
 const Nav = () => {
+
     const [isOpen, setOpen] = useState(false)
     const [blockScroll, allowScroll] = Scrolling()
     isOpen ? blockScroll() : allowScroll()
+
+    const [isScrolled, setIsScrolled] = useState(false)
+    useEffect (() => {
+        const handleScroll = () => {
+            window.scrollY >= window.innerHeight ? setIsScrolled(true) : setIsScrolled(false)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    })
+
     return (
-        <nav className='w-full h-24 fixed'>
+        <nav className='w-full h-24 fixed backdrop-blur-sm'>
             <div className='w-2/3 m-auto flex'>
-                <div className='w-2/3 xl:w-3/4 flex text-light-gray text-center lg:hidden'>
-                    <a className='w-24 h-24' href="#home">
-                        <img className='m-auto w-full h-full' src={Logo} alt="Sense" />
-                    </a>
+                <div className={!isScrolled ? 'w-2/3 xl:w-3/4 flex text-light-gray text-center lg:hidden' : 'w-2/3 xl:w-3/4 flex text-background-main text-center lg:hidden'}>
+                    <ScrollLink smooth={true} to='home' className='w-24 h-24 cursor-pointer'>
+                    {
+                        !isScrolled ?
+                            <img className='m-auto w-full h-full' src={Logo} alt="Sense" />
+                        :
+                            <img className='m-auto w-full h-full' src={LogoDark} alt="Sense" />
+                    }
+                    </ScrollLink>
                     <div className='w-full flex align-middle'>
                         <ScrollLink smooth={true} spy={true} activeClass='active' to='home' className='m-auto text-xl cursor-pointer'>Home</ScrollLink>
                         <ScrollLink smooth={true} spy={true} activeClass='active' to='aboutus' className='m-auto text-xl cursor-pointer'>About Us</ScrollLink>
@@ -24,7 +42,13 @@ const Nav = () => {
                     </div>
                 </div>
                 <div className='w-1/3 xl:w-1/4 justify-end flex lg:hidden'>
-                    <img className='w-12 h-12 my-auto ml-auto' src={Account} alt="Account" />
+                    {
+                        !isScrolled ?
+                            <img className='w-12 h-12 my-auto ml-auto' src={Account} alt="Account" />
+                        :
+                            <img className='w-12 h-12 my-auto ml-auto' src={AccountDark} alt="Account" />
+                    }
+                    
                 </div>
                 <div className='hidden lg:ml-auto lg:block lg:align-middle lg:text-right lg:justify-end lg:mt-8'>
                     {isOpen ?
