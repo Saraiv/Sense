@@ -14,15 +14,17 @@ const Nav = () => {
     const [isScrolled, setIsScrolled] = useState(false)
     useEffect (() => {
         const handleScroll = () => {
-            window.scrollY >= window.innerHeight ? setIsScrolled(true) : setIsScrolled(false)
+            setIsScrolled(window.scrollY >= window.innerHeight)
         }
+
         window.addEventListener('scroll', handleScroll)
+
         return () => {
             window.removeEventListener('scroll', handleScroll)
         }
     })
 
-    const handleClickHamburger = () =>{
+    const handleClickHamburger = () => {
         isOpen ? setOpen(false) : setOpen(true)
     }
 
@@ -78,10 +80,10 @@ const Nav = () => {
                             <div className='lg:-z-50 lg:m-0 lg:block lg:absolute lg:right-0 lg:top-0 lg:w-screen lg:h-screen lg:bg-light-gray lg:text-background-main'>
                                 <div className='lg:m-auto lg:w-1/2 lg:h-full lg:flex lg:align-middle lg:justify-center lg:items-center'>
                                     <div className='lg:block lg:w-full lg:h-fit lg:text-center'>
-                                        <ScrollLink smooth={true} onClick={handleClickHamburger} to='home' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8 cursor-pointer'>Home</ScrollLink>
-                                        <ScrollLink smooth={true} onClick={handleClickHamburger} to='aboutus' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8 cursor-pointer'>About Us</ScrollLink>
-                                        <ScrollLink smooth={true} onClick={handleClickHamburger} to='pricing' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8 cursor-pointer'>Pricing</ScrollLink>
-                                        <ScrollLink smooth={true} onClick={handleClickHamburger} to='contactus' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8 cursor-pointer'>Contact Us</ScrollLink>
+                                        <ScrollLink smooth={true} spy={true} activeClass='active' to='home' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8 cursor-pointer' onClick={handleClickHamburger}>Home</ScrollLink>
+                                        <ScrollLink smooth={true} spy={true} activeClass='active' to='aboutus' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8 cursor-pointer' onClick={handleClickHamburger}>About Us</ScrollLink>
+                                        <ScrollLink smooth={true} spy={true} activeClass='active' to='pricing' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8 cursor-pointer' onClick={handleClickHamburger}>Pricing</ScrollLink>
+                                        <ScrollLink smooth={true} spy={true} activeClass='active' to='contactus' className='lg:block lg:m-auto lg:text-3xl lg:w-full lg:my-8 cursor-pointer' onClick={handleClickHamburger}>Contact Us</ScrollLink>
                                     </div>
                                 </div>
                             </div>
