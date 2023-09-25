@@ -22,7 +22,7 @@ const Main = () => {
             />
         </div>
         :
-        <div className='bg-background-main w-screen h-screen'>
+        <div id='home' className='bg-background-main w-screen h-screen'>
             <Nav />
             <Home />
             <AboutUs />

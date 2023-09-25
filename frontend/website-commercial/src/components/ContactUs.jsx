@@ -1,9 +1,11 @@
 import React from 'react'
 import { Logo } from './helpers/Images'
+import Scroll from 'react-scroll'
+const Element = Scroll.Element
 
 const ContactUs = () =>{
     return(
-        <div className=' h-2/5 lg:h-fit lg:m-auto bg-background-main w-full'>
+        <Element id='contactus' className=' h-2/5 lg:h-fit lg:m-auto bg-background-main w-full'>
             <div className='w-2/3 h-2/3 m-auto flex lg:block lg:m-auto'>
                 <div className='w-1/3 pt-5 block h-fit text-light-gray lg:m-auto'>
                     <img className='w-40 h-40' src={Logo} alt="Sense" />
@@ -38,7 +40,7 @@ const ContactUs = () =>{
                     © 2023-2023 All rights reserved to Sense
                 </p>
             </div>
-        </div>
+        </Element>
     )
 }
 

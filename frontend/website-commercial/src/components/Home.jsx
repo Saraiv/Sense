@@ -1,9 +1,11 @@
 import React from 'react'
 import { Logo } from './helpers/Images'
+import Scroll from 'react-scroll'
+const Element = Scroll.Element
 
 const Home = () =>{
     return(
-        <div className='w-2/3 m-auto h-screen flex'>
+        <Element id='home' className='w-2/3 m-auto h-screen flex'>
             <div className='w-1/2 h-full flex align-middle justify-center items-center lg:hidden'>
                 <img className='w-96 h-96 xl:w-80 xl:h-80 m-auto' src={Logo} alt="Sense" />
             </div>
@@ -17,7 +19,7 @@ const Home = () =>{
                     </p>
                 </div>
             </div>
-        </div>
+        </Element>
     )
 }
 

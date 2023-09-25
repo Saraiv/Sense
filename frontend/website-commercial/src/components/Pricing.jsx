@@ -1,8 +1,10 @@
 import React from 'react'
+import Scroll from 'react-scroll'
+const Element = Scroll.Element
 
 const Pricing = () =>{
     return(
-        <div className='h-full lg:h-fit flex align-middle justify-start items-center bg-light-white'>
+        <Element id='pricing' className='h-full lg:h-fit flex align-middle justify-start items-center bg-light-white'>
             <div className='w-2/3 m-auto text-background-main'>
                 <h1 className='py-32 text-bold text-9xl xl:text-8xl lg:text-center'>Pricing</h1>
                 <div className='flex w-full lg:block'>
@@ -35,7 +37,7 @@ const Pricing = () =>{
                     </div>
                 </div>
             </div>
-        </div>
+        </Element>
     )
 }
 
