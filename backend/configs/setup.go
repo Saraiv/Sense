@@ -22,11 +22,11 @@ func ConnectDB() *mongo.Client {
 		log.Fatal(err)
 	}
 
-	//ping the database
 	err = client.Ping(ctx, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	fmt.Println("Connected to MongoDB :)")
 	return client
 }
