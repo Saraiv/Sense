@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Player } from '@lottiefiles/react-lottie-player'
 import { SplashScreen } from './helpers/Lottie'
-import { Nav, Home, AboutUs, Pricing, ContactUs } from './helpers/Components'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Nav, Home, AboutUs, Pricing, ContactUs, Register } from './helpers/Components'
 
 const Main = () => {
     const [completed, setCompleted] = useState(false)
@@ -22,13 +23,29 @@ const Main = () => {
             />
         </div>
         :
-        <div id='home' className='bg-background-main w-screen h-screen'>
-            <Nav />
-            <Home />
-            <AboutUs />
-            <Pricing />
-            <ContactUs />
-        </div>
+        <Router>
+            <div id='home' className='bg-background-main w-screen h-screen'>
+                <Routes>
+                    <Route
+                        path='/'
+                        element={
+                            <>
+                                <Nav />
+                                <Home />
+                                <AboutUs />
+                                <Pricing />
+                                <ContactUs />
+                            </>
+                        }
+                    />
+                    <Route
+                        path='/register'
+                        element={  <Register /> }
+                    />
+                </Routes>
+            </div>
+        </Router>
+        
     )
 }
 
