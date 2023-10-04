@@ -9,6 +9,8 @@ const Home = () =>{
                         Become a user
                     </h1>
                     <input className='p-2 w-full mt-12' type='text' placeholder='Name' />
+                    <input className='p-2 w-full mt-12' type='password' placeholder='Password' />
+                    <input className='p-2 w-full mt-12' type='password' placeholder='Verify Password' />
                     <input className='p-2 w-full mt-12' type='email' placeholder='Email' />
                     <input className='p-2 w-full mt-12' type='text' placeholder='Location' />
                     <div className='flex m-auto align-middle justify-center text-center'>
